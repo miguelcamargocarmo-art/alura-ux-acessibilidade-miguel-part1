@@ -14,23 +14,47 @@
     </header>
 
     <main>
-        <section class="card">
+        <!-- CARD 1 -->
+        <article class="card">
             <h2>1. Caminhada na Esteira</h2>
             <p><strong>Benefício:</strong> Melhora a circulação e fortalece o coração.</p>
-            <p><strong>Como fazer:</strong> Caminhe em ritmo confortável por 15 a 20 minutos. Mantenha a postura ereta e segure nas barras laterais se precisar de apoio.</p>
-        </section>
+            <button class="btn-destacar" onclick="document.getElementById('modal1').showModal()">Destacar Exercício</button>
 
-        <section class="card">
+            <dialog id="modal1" class="modal-card">
+                <h2>1. Caminhada na Esteira</h2>
+                <p><strong>Benefício:</strong> Melhora a circulação e fortalece o coração.</p>
+                <p><strong>Como fazer:</strong> Caminhe em ritmo confortável por 15 a 20 minutos. Mantenha a postura ereta e segure nas barras laterais se precisar de apoio.</p>
+                <button class="btn-fechar" onclick="document.getElementById('modal1').close()">Fechar X</button>
+            </dialog>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card">
             <h2>2. Sentar e Levantar da Cadeira</h2>
             <p><strong>Benefício:</strong> Fortalece as pernas para facilitar atividades do dia a dia.</p>
-            <p><strong>Como fazer:</strong> Sente-se em um banco firme. Incline o corpo levemente para frente e levante-se usando a força das pernas. Repita 8 a 10 vezes.</p>
-        </section>
+            <button class="btn-destacar" onclick="document.getElementById('modal2').showModal()">Destacar Exercício</button>
 
-        <section class="card">
+            <dialog id="modal2" class="modal-card">
+                <h2>2. Sentar e Levantar da Cadeira</h2>
+                <p><strong>Benefício:</strong> Fortalece as pernas para facilitar atividades do dia a dia.</p>
+                <p><strong>Como fazer:</strong> Sente-se em um banco firme. Incline o corpo levemente para frente e levante-se usando a força das pernas. Repita 8 a 10 vezes.</p>
+                <button class="btn-fechar" onclick="document.getElementById('modal2').close()">Fechar X</button>
+            </dialog>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card">
             <h2>3. Remada Sentada na Máquina</h2>
             <p><strong>Benefício:</strong> Fortalece as costas e melhora a postura.</p>
-            <p><strong>Como fazer:</strong> Sente-se de frente para o aparelho, puxe a barra em direção ao abdômen mantendo a coluna reta e retorne devagar. Faça 10 repetições com carga leve.</p>
-        </section>
+            <button class="btn-destacar" onclick="document.getElementById('modal3').showModal()">Destacar Exercício</button>
+
+            <dialog id="modal3" class="modal-card">
+                <h2>3. Remada Sentada na Máquina</h2>
+                <p><strong>Benefício:</strong> Fortalece as costas e melhora a postura.</p>
+                <p><strong>Como fazer:</strong> Sente-se de frente para o aparelho, puxe a barra em direção ao abdômen mantendo a coluna reta e retorne devagar. Faça 10 repetições com carga leve.</p>
+                <button class="btn-fechar" onclick="document.getElementById('modal3').close()">Fechar X</button>
+            </dialog>
+        </article>
     </main>
 
     <footer>
