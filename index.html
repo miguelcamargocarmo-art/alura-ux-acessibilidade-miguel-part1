@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caminhada na Esteira - Vida Ativa</title>
+    <title>Vida Ativa - Exercícios para a Terceira Idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,56 +29,60 @@
 
     <header>
         <h1>Vida Ativa</h1>
-        <p>Aprofundamento: Caminhada na Esteira</p>
+        <p>Dicas simples de exercícios para a academia</p>
     </header>
 
     <main>
-        <section class="page-content">
-            <h2>1. Caminhada na Esteira para a Terceira Idade</h2>
-            
-            <p>A caminhada na esteira é um dos exercícios aeróbicos mais recomendados e seguros para idosos. Ela permite controlar totalmente fatores como velocidade, inclinação e tempo, minimizando o impacto nas articulações em comparação ao asfalto ou pisos irregulares.</p>
-
-            <!-- Figura Ilustrativa SVG -->
-            <div class="figure-container">
-                <svg width="220" height="180" viewBox="0 0 200 160">
-                    <!-- Esteira -->
-                    <rect x="20" y="120" width="160" height="12" rx="6" fill="#004D40"/>
-                    <line x1="30" y1="132" x2="20" y2="150" stroke="#004D40" stroke-width="6"/>
-                    <line x1="170" y1="132" x2="180" y2="150" stroke="#004D40" stroke-width="6"/>
-                    <!-- Barra de apoio -->
-                    <path d="M 40 120 L 40 60 L 70 60" fill="none" stroke="#00796B" stroke-width="5" stroke-linecap="round"/>
-                    <!-- Pessoa caminhando -->
-                    <circle cx="100" cy="35" r="12" fill="#004D40"/> <!-- Cabeça -->
-                    <line x1="100" y1="47" x2="100" y2="85" stroke="#004D40" stroke-width="5"/> <!-- Tronco -->
-                    <line x1="100" y1="55" x2="80" y2="65" stroke="#004D40" stroke-width="4"/> <!-- Braço esq -->
-                    <line x1="100" y1="55" x2="115" y2="65" stroke="#004D40" stroke-width="4"/> <!-- Braço dir -->
-                    <line x1="100" y1="85" x2="85" y2="120" stroke="#004D40" stroke-width="5"/> <!-- Perna esq -->
-                    <line x1="100" y1="85" x2="115" y2="120" stroke="#004D40" stroke-width="5"/> <!-- Perna dir -->
-                </svg>
-                <div class="figure-caption">Figura 1: Postura ereta e apoio correto durante a caminhada na esteira.</div>
+        <!-- CARD 1 -->
+        <article class="card">
+            <h2>1. Caminhada na Esteira</h2>
+            <p><strong>Benefício:</strong> Melhora a circulação e fortalece o coração.</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn-destacar" onclick="document.getElementById('modal1').showModal()">Destacar Exercício</button>
+                <a href="caminhada-esteira.html" class="btn-destacar" style="background-color: #00796B;">Saber Mais (Página Completa)</a>
             </div>
 
-            <h3>Benefícios Principais</h3>
-            <ul>
-                <li><strong>Saúde Cardiovascular:</strong> Fortalece o músculo cardíaco e reduz a pressão arterial.</li>
-                <li><strong>Melhoria da Mobilidade:</strong> Lubrifica as articulações dos joelhos e quadris.</li>
-                <li><strong>Controle de Açúcar no Sangue:</strong> Auxilia na regulação da glicemia e previne o diabetes tipo 2.</li>
-                <li><strong>Segurança:</strong> O piso emborrachado reduz impacto e evita buracos e tropeços comuns na rua.</li>
-            </ul>
+            <dialog id="modal1" class="modal-card">
+                <h2>1. Caminhada na Esteira</h2>
+                <p><strong>Benefício:</strong> Melhora a circulação e fortalece o coração.</p>
+                <p><strong>Como fazer:</strong> Caminhe em ritmo confortável por 15 a 20 minutos. Mantenha a postura ereta e segure nas barras laterais se precisar de apoio.</p>
+                <button class="btn-fechar" onclick="document.getElementById('modal1').close()">Fechar X</button>
+            </dialog>
+        </article>
 
-            <h3>Guia de Execução Segura</h3>
-            <p>Siga os passos abaixo para realizar o exercício com total conforto e segurança:</p>
-            <ul>
-                <li><strong>Postura:</strong> Olhe sempre para a frente, mantendo o queixo paralelo ao chão e os ombros relaxados. Evite olhar diretamente para os pés.</li>
-                <li><strong>Apoio Inicial:</strong> Segure-se nas barras laterais ao ligar o aparelho ou ajustar a velocidade. Quando se sentir seguro, apoie apenas levemente os dedos ou faça o movimento natural dos braços.</li>
-                <li><strong>Passada:</strong> Toque primeiro o calcanhar na esteira e depois role o pé até a ponta dos dedos.</li>
-            </ul>
+        <!-- CARD 2 -->
+        <article class="card">
+            <h2>2. Sentar e Levantar da Cadeira</h2>
+            <p><strong>Benefício:</strong> Fortalece as pernas para facilitar atividades do dia a dia.</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn-destacar" onclick="document.getElementById('modal2').showModal()">Destacar Exercício</button>
+                <a href="sentar-levantar.html" class="btn-destacar" style="background-color: #00796B;">Saber Mais (Página Completa)</a>
+            </div>
 
-            <h3>Frequência Recomendada</h3>
-            <p>Inicie com <strong>15 a 20 minutos</strong> em velocidade leve (entre 2.5 km/h a 4.0 km/h), de 3 a 4 vezes por semana. Aumente o tempo gradualmente conforme se sentir mais disposto.</p>
+            <dialog id="modal2" class="modal-card">
+                <h2>2. Sentar e Levantar da Cadeira</h2>
+                <p><strong>Benefício:</strong> Fortalece as pernas para facilitar atividades do dia a dia.</p>
+                <p><strong>Como fazer:</strong> Sente-se em um banco firme. Incline o corpo levemente para frente e levante-se usando a força das pernas. Repita 8 a 10 vezes.</p>
+                <button class="btn-fechar" onclick="document.getElementById('modal2').close()">Fechar X</button>
+            </dialog>
+        </article>
 
-            <a href="index.html" class="btn-voltar">← Voltar para a Página Inicial</a>
-        </section>
+        <!-- CARD 3 -->
+        <article class="card">
+            <h2>3. Remada Sentada na Máquina</h2>
+            <p><strong>Benefício:</strong> Fortalece as costas e melhora a postura.</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn-destacar" onclick="document.getElementById('modal3').showModal()">Destacar Exercício</button>
+                <a href="remada-sentada.html" class="btn-destacar" style="background-color: #00796B;">Saber Mais (Página Completa)</a>
+            </div>
+
+            <dialog id="modal3" class="modal-card">
+                <h2>3. Remada Sentada na Máquina</h2>
+                <p><strong>Benefício:</strong> Fortalece as costas e melhora a postura.</p>
+                <p><strong>Como fazer:</strong> Sente-se de frente para o aparelho, puxe a barra em direção ao abdômen mantendo a coluna reta e retorne devagar. Faça 10 repetições com carga leve.</p>
+                <button class="btn-fechar" onclick="document.getElementById('modal3').close()">Fechar X</button>
+            </dialog>
+        </article>
     </main>
 
     <footer>
