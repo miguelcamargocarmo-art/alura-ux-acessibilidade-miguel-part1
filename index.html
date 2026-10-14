@@ -5,179 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caminhada na Esteira - Vida Ativa</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Estilos adicionais para as páginas detalhadas */
-        #bg-3d {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            pointer-events: none;
-            opacity: 0.35;
-        }
-
-        .btn-voltar {
-            display: inline-block;
-            background-color: #004D40;
-            color: #FFFFFF;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            transition: background-color 0.2s;
-        }
-
-        .btn-voltar:hover {
-            background-color: #00796B;
-        }
-
-        .detalhes-container {
-            background-color: #FFFFFF;
-            border: 3px solid #004D40;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .ilustracao-tema {
-            text-align: center;
-            margin: 25px 0;
-            padding: 20px;
-            background-color: #E0F2F1;
-            border-radius: 12px;
-            border: 2px dashed #004D40;
-        }
-
-        .ilustracao-tema svg {
-            max-width: 180px;
-            height: auto;
-        }
-
-        .topico-aprofundado {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 2px solid #E0E0E0;
-        }
-
-        .topico-aprofundado h3 {
-            color: #004D40;
-            font-size: 26px;
-            margin-bottom: 10px;
-        }
-
-        .topico-aprofundado ul {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-
-        .topico-aprofundado li {
-            margin-bottom: 8px;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Canvas para Objetos Geométricos 3D ao Fundo -->
-    <canvas id="bg-3d"></canvas>
+    <!-- Objetos Geométricos 3D no Fundo -->
+    <div class="bg-3d-container">
+        <div class="shape-3d cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+        <div class="shape-3d pyramid">
+            <div class="pyramid-face pf1"></div>
+            <div class="pyramid-face pf2"></div>
+            <div class="pyramid-face pf3"></div>
+            <div class="pyramid-face pf4"></div>
+        </div>
+        <div class="shape-3d ring"></div>
+    </div>
 
-    <main style="margin-top: 20px;">
-        <a href="index.html" class="btn-voltar">&larr; Voltar para a Página Principal</a>
+    <header>
+        <h1>Vida Ativa</h1>
+        <p>Aprofundamento: Caminhada na Esteira</p>
+    </header>
 
-        <article class="detalhes-container">
-            <header style="margin-bottom: 20px;">
-                <h1>1. Caminhada na Esteira</h1>
-                <p>Guia Completo para Terceira Idade</p>
-            </header>
+    <main>
+        <section class="page-content">
+            <h2>1. Caminhada na Esteira para a Terceira Idade</h2>
+            
+            <p>A caminhada na esteira é um dos exercícios aeróbicos mais recomendados e seguros para idosos. Ela permite controlar totalmente fatores como velocidade, inclinação e tempo, minimizando o impacto nas articulações em comparação ao asfalto ou pisos irregulares.</p>
 
-            <!-- Figura Ilustrativa -->
-            <div class="ilustracao-tema">
-                <svg viewBox="0 0 100 100" width="150" height="150">
+            <!-- Figura Ilustrativa SVG -->
+            <div class="figure-container">
+                <svg width="220" height="180" viewBox="0 0 200 160">
                     <!-- Esteira -->
-                    <rect x="10" y="70" width="80" height="10" rx="3" fill="#004D40" />
-                    <rect x="15" y="80" width="10" height="12" fill="#333" />
-                    <rect x="75" y="80" width="10" height="12" fill="#333" />
-                    <path d="M 20 70 L 30 30 L 35 30 L 25 70" fill="#00796B" />
-                    <rect x="25" y="25" width="20" height="8" rx="2" fill="#004D40" />
-                    <!-- Boneco Caminhando -->
-                    <circle cx="55" cy="25" r="6" fill="#004D40" />
-                    <line x1="55" y1="31" x2="52" y2="52" stroke="#004D40" stroke-width="4" stroke-linecap="round" />
-                    <line x1="52" y1="52" x2="42" y2="68" stroke="#004D40" stroke-width="4" stroke-linecap="round" />
-                    <line x1="52" y1="52" x2="62" y2="68" stroke="#004D40" stroke-width="4" stroke-linecap="round" />
-                    <line x1="55" y1="38" x2="45" y2="48" stroke="#004D40" stroke-width="3" stroke-linecap="round" />
-                    <line x1="55" y1="38" x2="65" y2="46" stroke="#004D40" stroke-width="3" stroke-linecap="round" />
+                    <rect x="20" y="120" width="160" height="12" rx="6" fill="#004D40"/>
+                    <line x1="30" y1="132" x2="20" y2="150" stroke="#004D40" stroke-width="6"/>
+                    <line x1="170" y1="132" x2="180" y2="150" stroke="#004D40" stroke-width="6"/>
+                    <!-- Barra de apoio -->
+                    <path d="M 40 120 L 40 60 L 70 60" fill="none" stroke="#00796B" stroke-width="5" stroke-linecap="round"/>
+                    <!-- Pessoa caminhando -->
+                    <circle cx="100" cy="35" r="12" fill="#004D40"/> <!-- Cabeça -->
+                    <line x1="100" y1="47" x2="100" y2="85" stroke="#004D40" stroke-width="5"/> <!-- Tronco -->
+                    <line x1="100" y1="55" x2="80" y2="65" stroke="#004D40" stroke-width="4"/> <!-- Braço esq -->
+                    <line x1="100" y1="55" x2="115" y2="65" stroke="#004D40" stroke-width="4"/> <!-- Braço dir -->
+                    <line x1="100" y1="85" x2="85" y2="120" stroke="#004D40" stroke-width="5"/> <!-- Perna esq -->
+                    <line x1="100" y1="85" x2="115" y2="120" stroke="#004D40" stroke-width="5"/> <!-- Perna dir -->
                 </svg>
-                <p><em>Cardio seguro e com impacto controlado.</em></p>
+                <div class="figure-caption">Figura 1: Postura ereta e apoio correto durante a caminhada na esteira.</div>
             </div>
 
-            <section class="topico-aprofundado">
-                <h3>Benefícios Detalhados para a Saúde</h3>
-                <p>A caminhada na esteira é um dos exercícios aeróbicos mais recomendados para a terceira idade devido ao controle total sobre a velocidade e a inclinação, além de diminuir o impacto nas articulações comparado a superfícies irregulares na rua.</p>
-                <ul>
-                    <li><strong>Saúde Cardiovascular:</strong> Fortalece o músculo cardíaco, reduz a pressão arterial e auxilia no controle dos níveis de colesterol.</li>
-                    <li><strong>Manutenção do Peso:</strong> Auxilia no gasto calórico contínuo e na regulação do metabolismo.</li>
-                    <li><strong>Densidade Óssea:</strong> O impacto leve ao caminhar estimula a manutenção da massa óssea, prevenindo a osteoporose.</li>
-                </ul>
-            </section>
+            <h3>Benefícios Principais</h3>
+            <ul>
+                <li><strong>Saúde Cardiovascular:</strong> Fortalece o músculo cardíaco e reduz a pressão arterial.</li>
+                <li><strong>Melhoria da Mobilidade:</strong> Lubrifica as articulações dos joelhos e quadris.</li>
+                <li><strong>Controle de Açúcar no Sangue:</strong> Auxilia na regulação da glicemia e previne o diabetes tipo 2.</li>
+                <li><strong>Segurança:</strong> O piso emborrachado reduz impacto e evita buracos e tropeços comuns na rua.</li>
+            </ul>
 
-            <section class="topico-aprofundado">
-                <h3>Passo a Passo e Recomendações de Segurança</h3>
-                <ol style="margin-left: 25px; line-height: 1.8;">
-                    <li><strong>Aquecimento:</strong> Comece com uma velocidade baixa (2,0 a 3,0 km/h) por 3 a 5 minutos.</li>
-                    <li><strong>Ritmo Confortável:</strong> Aumente gradualmente para uma caminhada moderada (3,5 a 4,5 km/h). O ritmo ideal é aquele onde você consegue conversar sem ficar excessivamente ofegante.</li>
-                    <li><strong>Postura Correta:</strong> Olhe para a frente, mantenha os ombros relaxados e evite curvar as costas.</li>
-                    <li><strong>Uso dos Apoios:</strong> Segure nos corrimãos laterais apenas para equilíbrio inicial. Tente soltar as mãos gradualmente para trabalhar a coordenação e estabilidade corporal.</li>
-                </ol>
-            </section>
-        </article>
+            <h3>Guia de Execução Segura</h3>
+            <p>Siga os passos abaixo para realizar o exercício com total conforto e segurança:</p>
+            <ul>
+                <li><strong>Postura:</strong> Olhe sempre para a frente, mantendo o queixo paralelo ao chão e os ombros relaxados. Evite olhar diretamente para os pés.</li>
+                <li><strong>Apoio Inicial:</strong> Segure-se nas barras laterais ao ligar o aparelho ou ajustar a velocidade. Quando se sentir seguro, apoie apenas levemente os dedos ou faça o movimento natural dos braços.</li>
+                <li><strong>Passada:</strong> Toque primeiro o calcanhar na esteira e depois role o pé até a ponta dos dedos.</li>
+            </ul>
+
+            <h3>Frequência Recomendada</h3>
+            <p>Inicie com <strong>15 a 20 minutos</strong> em velocidade leve (entre 2.5 km/h a 4.0 km/h), de 3 a 4 vezes por semana. Aumente o tempo gradualmente conforme se sentir mais disposto.</p>
+
+            <a href="index.html" class="btn-voltar">← Voltar para a Página Inicial</a>
+        </section>
     </main>
 
     <footer>
         <p>Aviso: Sempre consulte seu médico antes de iniciar novos exercícios.</p>
     </footer>
 
-    <!-- Script Three.js para Formas Geométricas 3D -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg-3d'), alpha: true });
-        
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.position.z = 15;
-
-        // Criando formas geométricas 3D (Cilindros e Cubos)
-        const geometry1 = new THREE.CylinderGeometry(1, 1, 3, 16);
-        const material1 = new THREE.MeshBasicMaterial({ color: 0x004D40, wireframe: true });
-        const obj1 = new THREE.Mesh(geometry1, material1);
-        obj1.position.set(-8, 3, -2);
-
-        const geometry2 = new THREE.BoxGeometry(2, 2, 2);
-        const material2 = new THREE.MeshBasicMaterial({ color: 0x00796B, wireframe: true });
-        const obj2 = new THREE.Mesh(geometry2, material2);
-        obj2.position.set(8, -4, -3);
-
-        scene.add(obj1);
-        scene.add(obj2);
-
-        function animate() {
-            requestAnimationFrame(animate);
-            obj1.rotation.x += 0.008;
-            obj1.rotation.y += 0.008;
-            obj2.rotation.x += 0.005;
-            obj2.rotation.y += 0.009;
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
 </body>
 </html>
